@@ -30,4 +30,9 @@ public class NamesController {
     public ResponseEntity<Map<String, String>> update(@PathVariable("id") int id, @RequestBody UpdateForm form) {
         return ResponseEntity.ok(Map.of("massage", "name successfully updated"));
     }
+
+    @DeleteMapping("/names/{id}")
+    public ResponseEntity<Map<String, String>> delete(@PathVariable("id") int id) {
+        return ResponseEntity.ok(Map.of("massage", "id successfully deleted"));
+    }
 }
